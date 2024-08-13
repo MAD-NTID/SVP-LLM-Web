@@ -5,18 +5,11 @@
     <title>Chat with Llama2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link href="resources/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="resources/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-    <script src="resources/marked.min.js"
-        integrity="sha384-dZulhREgb+hCgQMhZ2VG0l37VQj5pJBq2w0h7Jn3tdMn36aXNepF1+FMLBB4O649"
-        crossorigin="anonymous"></script>
-    <script src="resources/purify.min.js" integrity="sha256-QigBQMy2be3IqJD2ezKJUJ5gycSmyYlRHj2VGBuITpU="
-        crossorigin="anonymous"></script>
-    <script src="resources/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs"
-        crossorigin="anonymous"></script>
+    <link href="resources/bootstrap.min.css" rel="stylesheet">
+    <script src="resources/bootstrap.bundle.min.js"></script>
+    <script src="resources/marked.min.js"></script>
+    <script src="resources/purify.min.js"></script>
+    <script src="resources/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="chat.css">
 </head>
 
@@ -35,9 +28,9 @@
 
           <div class="position-fixed w-100" style="z-index: 9999; top: 0px; height: 200px;  background: linear-gradient(180deg, black, transparent);">
             <div class="d-flex justify-content-between align-items-center m-0" style="padding: 16px;">
-                <h1>Chat with Ollama</h1>
+                <h1>TigerGPT</h1>
                 <!-- Model dropdown -->
-                <div class="d-flex align-items-center m-1">
+                <div class="d-flex align-items-center m-1" style="display:none !important">
                   <div class="p-2 flex-grow-1 bd-highlight">
                     <label for="system-prompt" class="me-2" style="font-size: normal;">System Prompt</label>
                     <input id="system-prompt" class="form-control" type="text" placeholder="You are a helpful assistant" style="width: auto;"></select>
@@ -54,13 +47,7 @@
                             <option value="" disabled selected>Select a chat</option>
                         </select>
                     </div>
-                    <div class="p-auto flex-grow-1 bd-highlight">
-                        <div class="d-flex flex-column">
-                        <button id="new-chat" class="btn btn-dark mb-2" type="button">Reset</button>
-                        <button id="save-chat" class="btn btn-secondary mb-2" type="button" data-bs-toggle="modal" data-bs-target="#nameModal">Save</button>
-                        <button id="delete-chat" class="btn btn-danger" type="button">Delete</button>
-                      </div>
-                    </div>
+  
                 </div>
             </div>
         </div>

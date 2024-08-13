@@ -148,6 +148,14 @@ document.addEventListener("scroll", (event) => {
   lastKnownScrollPosition = window.scrollY;
 });
 
+//listen when the user click on the enter button
+document.getElementById('user-input').addEventListener("keypress", function(event){
+  if(event.key == "Enter"){
+     //simulate the click of the send button
+     document.getElementById("send-button").click();
+  }
+});
+
 
 // Function to handle the user input and call the API functions
 async function submitRequest() {
